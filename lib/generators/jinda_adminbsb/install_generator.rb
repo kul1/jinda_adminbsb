@@ -9,8 +9,8 @@ module Jinda_adminbsb
       inside("app/views/layouts") { run "mv application.haml application.haml.bak" }
       inside("app/views/layouts") { run "mv bsb bsb.bak" }
       inside("app/assets") { run "mv jinda_assets ../../tmp/cache" }
-      inside("app/assets") { run "mv javascripts javascripts.bak" }
-      inside("app/assets") { run "mv stylesheets stylesheets.bak" }
+      inside("app/assets") { run "mv javascripts ../../tmp/cache" }
+      inside("app/assets") { run "mv stylesheets ../../tmp/cache" }
       inside("app/jinda") { run "mv index.mm index.mm.bak"}
       directory "app/assets/jinda_assets"
       directory "app/views/adminbsbs"
