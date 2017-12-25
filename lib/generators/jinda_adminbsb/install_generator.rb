@@ -11,7 +11,6 @@ module Jinda_adminbsb
       inside("app/assets") { run "mv jinda_assets ../../tmp/cache" }
       inside("app/assets") { run "mv javascripts ../../tmp/cache" }
       inside("app/assets") { run "mv stylesheets ../../tmp/cache" }
-      inside("app/jinda") { run "mv index.mm index.mm.bak"}
       directory "app/assets/jinda_assets"
       directory "app/views/adminbsbs"
       directory "app/views/layouts/bsb"  
@@ -20,11 +19,10 @@ module Jinda_adminbsb
     def copy_theme
       copy_file "application.js","app/assets/javascripts/application.js"
       copy_file "jindabsb.js","app/assets/javascripts/jindabsb.js"
-      copy_file "application.scss","app/assets/stylesheets/application.scss"
+      copy_file "application.css.scss","app/assets/stylesheets/application.css.scss"
       copy_file "jindabsb.css.scss","app/assets/stylesheets/jindabsb.css.scss"
       copy_file "application.haml","app/views/layouts/application.haml"
       copy_file "adminbsbs_controller.rb","app/controllers/adminbsbs_controller.rb"
-      copy_file "index.mm","app/jinda/index.mm"
   end
 
     def finish        
